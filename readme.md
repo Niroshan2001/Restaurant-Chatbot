@@ -37,7 +37,7 @@ pip install -r requirements.txt
 3.Navigate to the Backend Directory
 
 ```bash
-     cd Backend
+cd Backend
 ```
 
 4.Start the Uvicorn Server
