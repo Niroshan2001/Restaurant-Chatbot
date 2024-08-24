@@ -7,12 +7,14 @@ st.set_page_config(layout="wide")
 
 # Simulated Menu Data (Food Item, Price, and Image URL)
 menu_data = [
-    {"name": "Pizza", "price": 8.99, "image_path": "pizza.png"},
-    {"name": "Biriyani", "price": 5.49, "image_path": "Biriyani.png"},
-    {"name": "Pasta", "price": 7.99, "image_path": "pizza.png"},
-    {"name": "Salad", "price": 4.99, "image_path": "pizza.png"},
-    {"name": "Soda", "price": 1.99, "image_path": "Biriyani.png"},
-    {"name": "Coffee", "price": 2.49, "image_path": "Biriyani.png"},
+    {"name": "Pizza", "price": 8, "image_path": "pizza.png"},
+    {"name": "Biriyani", "price": 9, "image_path": "Biriyani.png"},
+    {"name": "Samosa", "price": 5, "image_path": "samosa.jpg"},
+    {"name": "Chole Bhature", "price": 7, "image_path": "chola bhature.png"},
+    {"name": "Mango Lassi", "price": 5, "image_path": "mango lassi.jpg"},
+    {"name": "Masala Dosa", "price": 6, "image_path": "masala dosa.jpg"},
+    {"name": "Rava Dosa", "price": 7, "image_path": "rava dosa.png"},
+    {"name": "Vada Pav", "price": 4, "image_path": "vada pav.jpg"},
 ]
 
 # Function to load and resize local images
@@ -77,10 +79,13 @@ with tabs[2]:
             Email: serendib@restaurant.com
             Address: No. 5,Fedrica Road,Wellawatte, Colombo 00600, Sri Lanka
                  
-        Operating Hours:
-            Monday to Friday: 11:00 AM - 10:00 PM
-            Saturday and Sunday: 12:00 PM - 11:00 PM
+        
     """)
+        st.markdown("### Hours of Operation")
+        st.write("""
+            **Monday to Friday**: 11:00 AM - 10:00 PM  
+            **Saturday and Sunday**: 12:00 PM - 11:00 PM
+           """) 
     with col2:
         st.image("map.png", use_column_width=True)
     
