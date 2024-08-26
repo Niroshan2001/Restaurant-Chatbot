@@ -2,8 +2,12 @@ import streamlit as st
 from PIL import Image
 import requests
 from io import BytesIO
-
+import streamlit.components.v1 as components
 st.set_page_config(layout="wide")
+
+
+
+
 
 # Simulated Menu Data (Food Item, Price, and Image URL)
 menu_data = [
@@ -45,6 +49,7 @@ with tabs[0]:
                 resized_img = load_and_resize_image(item["image_path"])  # Resize image
                 col.subheader(f"{item['name']} - ${item['price']:.2f}")
                 col.image(resized_img, caption=item['name'], use_column_width=True)
+    
 
 # About Page Tab
 with tabs[1]:
@@ -88,4 +93,26 @@ with tabs[2]:
            """) 
     with col2:
         st.image("map.png", use_column_width=True)
-    
+
+
+components.html(
+    """
+    <style>
+        #chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            width: 350px;
+            height: 500px;
+            border: none;
+        }
+    </style>
+    <iframe
+        id="chatbot"
+        allow="microphone;"
+        src="https://console.dialogflow.com/api-client/demo/embedded/4d272199-92a2-4788-8a5f-f6379f90dada"
+    ></iframe>
+    """,
+    height=500,  # Adjust height based on iframe size
+)   
